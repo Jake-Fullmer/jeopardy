@@ -12,8 +12,8 @@ class QuestionService {
     _api
       .get("random")
       .then(response => {
-        let questions = new Question(response.data[0]);
-        store.commit("questions", questions)
+        let question = new Question(response.data[0]);
+        store.commit("question", question)
       })
       .catch(error => {
         console.log(error);

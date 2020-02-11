@@ -11,6 +11,8 @@ export default class Question {
     <li>${this.category}</li>;
     <li>${this.question}</li>;
     <li>${this.value}</li>;
-    `
+    `;
   }
 }
+
+

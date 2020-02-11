@@ -2,14 +2,14 @@ import Question from "./Models/Question.js";
 
 let _state = {
   /** @type {Question[]} */
-  questions: []
+  question: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  questions: []
+  question: []
 };
 
 //NOTE You should not need to change the code from this point down
