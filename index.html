@@ -5,17 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <title>Jeopardy API</title>
 </head>
 
-<body>
+<body class="container-fluid">
     <div class="row">
-        <div class="col-12"></div>
-        <button onclick="app.questionController.getApiQuestions()"> Button</button>
+        <div class="col-12 p-4">
+            <button type="button" class="btn btn-primary" onclick="app.questionController.getApiQuestions()">
+                Get Question</button>
+        </div>
     </div>
-    <div>
-        <ol id="questions"></ol>
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/200/100" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 id="category" class="card-title">Category</h5>
+                    <p id="value" class="card-text">Value Will Go Here</p>
+                    <p id="question" class="card-text">Question Will Go Here</p>
+                    <p id="answer" class="card-text">Answer Will Go Here</p>
+                    <button type="button" class="btn btn-primary p-2" onclick="">Show Answer</button>
+                    <button type="button" class="btn btn-primary p-2" onclick="">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <ol id="questions"></ol> -->
     </div>
 
 

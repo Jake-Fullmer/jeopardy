@@ -6,13 +6,27 @@ export default class Question {
     this.value = data.value
   }
 
-  get Template() {
+  get categoryTemplate() {
     return `
     <li>${this.category}</li>;
+    `;
+  }
+  get questionTemplate() {
+    return `
     <li>${this.question}</li>;
+    `;
+  }
+  get answerTemplate() {
+    return `
+    <li>${this.answer}</li>;
+    `;
+  }
+  get valueTemplate() {
+    return `
     <li>${this.value}</li>;
     `;
   }
 }
 
-
+{/* <li>${this.question}</li>;
+    <li>${this.value}</li>; */}
