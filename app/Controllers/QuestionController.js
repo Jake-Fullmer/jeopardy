@@ -6,8 +6,8 @@ function _draw() {
   let questions = store.State.questions;
   console.log(questions);
   let template = "";
-  questions.forEach(q => {
-    template += q.Template;
+  questions.forEach(c => {
+    template += c.Template;
   });
   document.getElementById("questions").innerHTML = template;
 }

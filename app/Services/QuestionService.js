@@ -12,7 +12,7 @@ class QuestionService {
     _api
       .get("random")
       .then(response => {
-        let questions = new Question(response.data);
+        let questions = new Question(response.data[0]);
         store.commit("questions", questions)
       })
       .catch(error => {
