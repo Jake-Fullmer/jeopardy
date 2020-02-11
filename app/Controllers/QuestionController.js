@@ -9,6 +9,7 @@ function _draw() {
   document.getElementById("category").innerHTML = question.categoryTemplate;
   document.getElementById("question").innerHTML = question.questionTemplate;
   document.getElementById("value").innerHTML = question.valueTemplate;
+  document.getElementById("answer").innerHTML = "";
 }
 
 
