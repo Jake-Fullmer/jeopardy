@@ -1,9 +1,16 @@
-export default class Value {
+export default class Question {
   constructor(data) {
-    this.title = data.title
+    this.category = data.category.title
+    this.question = data.question
+    this.answer = data.answer
+    this.value = data.value
   }
 
   get Template() {
-    return this.title
+    return `
+    <li>${this.category}</li>;
+    <li>${this.question}</li>;
+    <li>${this.value}</li>;
+    `
   }
 }

@@ -1,15 +1,23 @@
-import ValuesService from "../Services/QuestionService.js";
+import QuestionService from "../Services/QuestionService.js";
 import store from "../store.js";
 
 //Private
 function _draw() {
-  let values = store.State.values;
-  console.log(values);
+  let questions = store.State.questions;
+  console.log(questions);
+  let template = "";
+  questions.forEach(q => {
+    template += q.Template;
+  });
+  document.getElementById("questions").innerHTML = template;
 }
 
 //Public
-export default class ValuesController {
+export default class QuestionController {
   constructor() {
     store.subscribe("values", _draw);
+  }
+  getApiQuestions() {
+    QuestionService.getApiQuestion();
   }
 }

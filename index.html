@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style.css">
-    <title>Document</title>
+    <title>Jeopardy API</title>
 </head>
 
 <body>
+    <div class="row">
+        <div class="col-12"></div>
+        <button onclick="app.questionController.getApiQuestions()"> Button</button>
+    </div>
+    <div>
+        <ol id="questions"></ol>
+    </div>
 
 
-
-
+    <!-- NOTE EXTERNAL LIBRARIES FIRST  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
