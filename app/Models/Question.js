@@ -8,25 +8,23 @@ export default class Question {
 
   get categoryTemplate() {
     return `
-    <li>${this.category}</li>;
+    ${this.category}
     `;
   }
   get questionTemplate() {
     return `
-    <li>${this.question}</li>;
+    ${this.question}
     `;
   }
   get answerTemplate() {
     return `
-    <li>${this.answer}</li>;
+    ${this.answer}
     `;
   }
   get valueTemplate() {
     return `
-    <li>${this.value}</li>;
+    ${this.value}
     `;
   }
 }
 
-{/* <li>${this.question}</li>;
-    <li>${this.value}</li>; */}

@@ -6,16 +6,11 @@ import store from "../store.js";
 function _draw() {
   let question = store.State.question;
   console.log(question);
-  document.getElementById("category").innerHTML = "category"
-  document.getElementById("question").innerHTML = "question"
-  document.getElementById("value").innerHTML = "value"
+  document.getElementById("category").innerHTML = question.categoryTemplate;
+  document.getElementById("question").innerHTML = question.questionTemplate;
+  document.getElementById("value").innerHTML = question.valueTemplate;
 }
 
-function _drawAnswer() {
-  let answer = store.State.question;  // at an index?
-  console.log(answer)
-  document.getElementById("answer").innerHTML = "answer"
-}
 
 //Public
 export default class QuestionController {
@@ -24,5 +19,10 @@ export default class QuestionController {
   }
   getApiQuestions() {
     QuestionService.getApiQuestion();
+  }
+  drawAnswer() {
+    let answer = store.State.question;
+    console.log(answer)
+    document.getElementById("answer").innerHTML = answer.answerTemplate;
   }
 }

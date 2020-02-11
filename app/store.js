@@ -1,8 +1,8 @@
 import Question from "./Models/Question.js";
 
 let _state = {
-  /** @type {Question[]} */
-  question: []
+  /** @type {Question} */
+  question: undefined
 };
 
 /** Collection of listeners to be called based on keyed state changes
