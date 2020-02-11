@@ -15,7 +15,7 @@ function _draw() {
 //Public
 export default class QuestionController {
   constructor() {
-    store.subscribe("values", _draw);
+    store.subscribe("questions", _draw);
   }
   getApiQuestions() {
     QuestionService.getApiQuestion();
